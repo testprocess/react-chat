@@ -1,7 +1,7 @@
 import React, { useContext, createContext, useReducer, useState } from "react";
 
 import ChatBody from "./ChatBody"
-import { useChatState } from "../App"
+import { useChatState } from "../ChatContext"
 
 
 

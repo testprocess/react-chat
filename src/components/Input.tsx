@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { useChatDispatch } from "../App"
+import { useChatDispatch } from "../ChatContext"
 
 function InputForm() {
     const [message, setMessage] = useState('');
