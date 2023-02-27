@@ -16,6 +16,12 @@ function ChatBox() {
             {chatState.chat.map((chatData: any) => (
                 <ChatBody data={chatData} key={chatData.id}></ChatBody>
             ))}
+
+            <div className="mb-50">
+                <br />
+                <br />
+                <br />
+            </div>
             
         </div>
     );
