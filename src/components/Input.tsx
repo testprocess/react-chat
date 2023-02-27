@@ -1,15 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { useChatDispatch } from "../App"
 
 function InputForm() {
     const [message, setMessage] = useState('');
+    const dispatch: any = useChatDispatch()
+
 
     const handleChange = (e: any) => {
         setMessage(e.target.value);
     }
 
     const handleClick = (e: any) => {
+        dispatch({ type: "CREATE", chat: {
+            id: Math.random(),
+            name: "Me",
+            message: message
+        }})
         setMessage('');
     }
+
+
 
     return (
         <div className="fixed bottom-0 left-0 px-6 py-4 w-full">
@@ -24,6 +34,6 @@ function InputForm() {
 
 
 
-export default InputForm;
+export default React.memo(InputForm);
   
   

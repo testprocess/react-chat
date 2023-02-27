@@ -1,13 +1,15 @@
 
 type ChatBodyProps = {
-    name: string;
-    message: string;
+    data: {
+        name: string;
+        message: string;
+    }
 }
 
 function ChatBody(props: ChatBodyProps) {
     return (
         <div className="bg-blue-500 text-white">
-            {props.name}: {props.message}
+            {props.data.name}: {props.data.message}
 
         </div>
     );
